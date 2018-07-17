@@ -1,0 +1,138 @@
+{%extends 'baseUser.html'%}
+
+{%block content%}
+<div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <form class="form-horizontal" method="POST" action="">
+                {{form.hidden_tag()}}
+                <!--data pribadi calon mahasiswa -->
+                <div class="form-group">
+                    {{form.nama.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.nama(class="form-control", value=daftar.nama)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.ttl.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.ttl(class="form-control", value=daftar.ttl)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.jenis_kelamin.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.jenis_kelamin(class="form-control", value=daftar.jenis_kelamin)}}
+                    </div>
+                </div> 
+                <div class="form-group">
+                    {{form.agama.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.agama(class="form-control", value=daftar.agama)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.status.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.status(class="form-control", value=daftar.status)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.no_telpon.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.no_telpon(class="form-control", value=daftar.no_telpon)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.email.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.email(class="form-control", value=daftar.email)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.alamat.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.alamat(class="form-control", value=daftar.alamat)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.prodi.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.prodi(class="form-control", value=daftar.prodi)}}
+                    </div>
+                </div>
+<!--data akademik c.mhs-->
+                <div class="form-group">
+                    {{form.sekolah_asal.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.sekolah_asal(class="form-control", value=daftar.sekolah_asal)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.alamat_sekolah.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.alamat_sekolah(class="form-control", value=daftar.alamat_sekolah)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.jurusan.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.jurusan(class="form-control", value=daftar.jurusan)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.thn_lulus.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.thn_lulus(class="form-control", value=daftar.thn_lulus)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.nilairata.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.nilairata(class="form-control", value=daftar.nilairata)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.no_ijazah.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.no_ijazah(class="form-control", value=daftar.no_ijazah)}}
+                   </div>
+                </div>
+
+<!--data wali c.mhs-->
+                <div class="form-group">
+                    {{form.nama_wali.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.nama_wali(class="form-control", value=daftar.nama_wali)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.profesi.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.profesi(class="form-control", value=daftar.profesi)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.alamat_wali.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.alamat_wali(class="form-control", value=daftar.alamat_wali)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.pendidikan.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.pendidikan(class="form-control", value=daftar.pendidikan)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.no_hp.label(class="control-label col-sm-4")}}
+                    <div class="col-sm-8">
+                        {{form.no_hp(class="form-control", value=daftar.no_hp)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{form.submit(class="col-sm-offset-4 btn btn-success")}}
+                </div>
+            </form>
+        </div>
+    </div>
+{%endblock%}

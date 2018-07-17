@@ -1,0 +1,72 @@
+{%extends 'baseUser.html'%}
+
+{%block content%}
+    <div class="row">
+        <div class="col-sm-12 col-sm-offset-0">
+        <table class="table table-striped">
+            <thead><center>
+                <h2>DAFTAR CALON MAHASISWA</h2>
+            </center>
+              <tr>
+        <!--data pribadi-->
+                <th>Nama</th>
+                <th>Tempat tgl.Lahir</th>
+                <th>Jenis Kelamin</th>
+                <th>Agama</th>
+                <th>Status</th>
+                <th>No. Telpon</th>
+                <th>E-Mail</th>
+                <th>Alamat</th>
+                <th>Pilihan Prodi</th>
+        <!--data akademik-->
+                <th>Sekolah Asal</th>
+                <th>Alamat Sekolah</th>
+                <th>Tahun Lulus</th>
+                <th>Jurusan</th>
+                <th>Nilai Rata-Rata Ujian</th>
+                <th>No. Ijazah</th>
+        <!--data wali-->
+                <th>Nama Wali</th>
+                <th>Pekerjaan</th>
+                <th>Alamat</th>
+                <th>Pendidikan Terakhir</th>
+                <th>No. Telpon</th>
+              </tr>
+            </thead>
+            <tbody>
+                {%for b in daftar%}
+                    <tr>
+            <!--data pribadi-->
+                        <td>{{b.nama}}</td>
+                        <td>{{b.ttl}}</td>
+                        <td>{{b.jenis_kelamin}}</td>
+                        <td>{{b.agama}}</td>
+                        <td>{{b.status}}</td>
+                        <td>{{b.no_telpon}}</td>
+                        <td>{{b.email}}</td>
+                        <td>{{b.alamat}}</td>
+                        <td>{{b.prodi}}</td>
+            <!--data akademik-->
+                        <td>{{b.sekolah_asal}}</td>
+                        <td>{{b.alamat_sekolah}}</td>
+                        <td>{{b.thn_lulus}}</td>
+                        <td>{{b.jurusan}}</td>
+                        <td>{{b.nilairata}}</td>  
+                        <td>{{b.no_ijazah}}</td>
+            <!--data wali-->
+                        <td>{{b.nama_wali}}</td>
+                        <td>{{b.profesi}}</td>
+                        <td>{{b.alamat_wali}}</td>
+                        <td>{{b.pendidikan}}</td>
+                        <td>{{b.no_hp}}</td>
+                        <td>
+                            <a href="{{url_for('edit_daftar', id=b.id)}}" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href="{{url_for('delete_daftar', id=b.id)}}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        </div>
+    </div>
+{%endblock%}
